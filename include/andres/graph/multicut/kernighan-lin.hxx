@@ -7,6 +7,7 @@
 #include <stdexcept>
 #include <set>
 #include <vector>
+#include <limits>
 
 #include "../complete-graph.hxx"
 

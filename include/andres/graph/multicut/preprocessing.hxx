@@ -3,6 +3,7 @@
 #define ANDRES_GRAPH_MULTICUT_PREPROCESSING_HXX
 
 #include <cmath>
+#include <limits>
 
 #include "andres/graph/components.hxx"
 #include "andres/graph/bridges.hxx"
@@ -15,7 +16,8 @@ namespace multicut {
 // Edge contraction operation by masking
 // First vertex of given node pair stays in the graph, the other one is removed (masked)
 // Flags affected vertices in optional flag pointer
-void contract(andres::graph::Graph<> & graph, std::vector<double> & edge_costs, 
+template <typename T>
+void contract(andres::graph::Graph<T> & graph, std::vector<double> & edge_costs, 
     std::vector<char> & emask, std::vector<char> & vmask, std::vector<size_t> pair,
     std::vector<std::pair<std::pair<size_t,size_t>, char>> & constr, std::vector<char> * flag = NULL)
 {

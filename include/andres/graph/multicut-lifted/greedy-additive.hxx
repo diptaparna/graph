@@ -8,6 +8,7 @@
 #include <algorithm>
 #include <map>
 #include <queue>
+#include <limits>
 
 #include "andres/partition.hxx"
 
